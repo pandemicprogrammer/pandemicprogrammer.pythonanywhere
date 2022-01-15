@@ -1,0 +1,123 @@
+@import 'variables';
+
+// Header 
+.header {
+
+    // &.closed {
+
+    //     .overlay {
+    //         opacity: 0;
+    //     }
+    // }
+
+    // Hamburger open menu helper class
+    &.open { 
+
+        .overlay {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient($blue, transparent);
+         }
+
+        .header__menu {
+            > span:first-child {
+                transform: rotate(45deg); // Line 1 rotates 45 degrees
+        
+            }
+        
+            > span:nth-child(2) {
+                opacity: 0;
+                
+            }
+        
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    
+    // Overlay defaults
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 11.875rem; bottom: 0; left: 0; right: 0;
+        background: linear-gradient($blue, transparent);
+    }
+    // nav
+    nav {
+        padding: 1.5rem;
+    }
+
+    // header__logo
+    &__logo {
+        img {
+        width: 8rem; height: auto;
+        padding: 0;
+        }
+    }
+
+    // header__menu
+    &__menu { 
+
+        > span { // Direct child selector '>' 
+            display: block;
+            width: 1.625rem;
+            height: .3125rem;
+            background-color: $purple;
+            transition: all 500ms;
+            transform-origin: .125rem .1875rem;
+            
+            &:not(:last-child){ // Not selector '&:not(:element)' to exclude 
+                margin-bottom: .1875rem;
+            }
+        }
+    }
+    
+    // header__links
+    &__links {
+        a {
+            position: relative;
+            font-size: $fontMed;
+            font-family: 'VT323', monospace;
+            transition: ease-in-out color 200ms;
+            color: $purple;
+            
+            &:not(:last-child){ // Not selector '&:not(:element)' to exclude 
+                margin-right: 2rem;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: .3125rem;
+                background-color: $darkBlue;
+                left: 0; right: 0; bottom: -.75rem; // Margin offsets for active bar underline
+                background: linear-gradient(to right, $blue, $fuscia);
+                opacity: 0;
+                transition: opacity 300ms ease-in;
+            }
+
+            &:hover {
+                color: rgb(185, 185, 185);
+                
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // CTA button 'Contact Me'
+    &__cta {
+        font-size: $fontSm;
+        color: #effeee;
+        transition: opacity 300ms ease-in-out;
+
+    }
+}
+
+

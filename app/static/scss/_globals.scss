@@ -1,0 +1,102 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+
+p {
+    padding-right: 8rem;
+}
+
+html {
+    // Best practices:
+    //     responsive, adjusts to user specs
+    font-size: 100%;
+    //     auto-padding
+    box-sizing:border-box;
+}
+
+// Wild-card selector *
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    line-height: 1.3;
+    color: $charcoal;
+    font-weight: 400; // Default text weight
+    }
+// Global anchor settings
+a, a:visited, a:hover { // element selector, element selector:status
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;}
+
+h2 { 
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    }
+li {
+    font-family: 'Nixie One', cursive;    list-style-type: none;
+    text-align: center;
+   
+
+}
+
+// Buttons
+button, .button {
+    padding: 1rem 1.8rem;
+    color: white;
+    font-size: $fontMed;
+    border-radius: 1.5625rem;
+    font-weight: 400;
+    font-family: 'VT323', monospace;
+    cursor: pointer; // Cursor when hover
+    background: linear-gradient(to right, $blue, $fuscia);
+
+    &:hover {
+        opacity: 75%;
+        transition: opacity 200ms ease-in;
+        border: none;
+        transition: border 200ms ease-out;
+    }
+}
+
+// Flexbox
+.flex {
+    display: flex;
+
+    // Class properties
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;    
+    }
+}
+
+// Visibility
+.hide-for-mobile {
+    // hide for tablet and mobile
+    @include breakpoint-down(medium) {
+        display:none;
+    }
+}
+
+.hide-for-desktop {
+    // hide for desktop viewport widths
+    @include breakpoint-up(large) { // '@include' mixin to add styles
+        display: none;
+    }
+}
+
+ul {
+
+}
