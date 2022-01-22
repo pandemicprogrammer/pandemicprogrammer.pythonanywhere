@@ -1,63 +1,115 @@
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
-        </style>
 
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="scss/style.css">
+
+     <!-- STYLES -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Julius+Sans+One&family=Nixie+One&family=Sigmar+One&family=VT323&display=swap');
         </style>
 
+    <!-- PAGE TITLE -->
     <title>Pandemic Programmer</title>
 </head>
 
     <body>
+
+        <!-- HEADER -->
         <header class="header">
-            <div class="overlay"></div>
+
+            <!-- OVERLAY -->
+            <div class="overlay hide-for-desktop has-fade fade-out"></div>
             <nav class="flex flex-jc-sb flex-ai-c">
                 
-                <a href="#" id="btnHamburger" class="header__menu hide-for-desktop">  
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <!-- HEADER__LOGO -->
+                <a href="/" class="header__logo">
+                    <img src="images/pplogo.png" alt="Pandemic Programmer" class="logo">
                 </a>
 
-                <a href="/" class="header__logo">
-                    <img src="pplogo.png" alt="Pandemic Programmer" class="logo">
+
+                <!-- HEADER__TOGGLE HAMBURGER MENU -->
+                <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">  
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </a>
                 
+                <!-- HEADER__LINKS -->
                 <div class="header__links hide-for-mobile">
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">MyWorkflow</a>
                     <a href="#">CodeCheats</a>
                 </div>
-                <a href="#" class="button hide-for-mobile header__button">Contact Me</a>
+                <a href="/files/MValentonis Web Developer.pdf" class="button hide-for-mobile header__button">Contact Me</a>
             </nav>
+
+            <!-- HEADER__MENU -->
+            <div class="header__menu hide-for-desktop has-fade">
+                <a href="http://">Home</a>
+                <a href="http://">About</a>
+                <a href="http://">MyDesigns</a>
+                <a href="http://">CodeTips</a>
+                
+            </div>
         </header>
 
-        <div>
-            <h1 class="flex-jc-c">Tools used in development of this site...</h1>
-            <h2>Front End</h2>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero__container">
 
-            
-            <li> Developer Tools</li>
-            <li>Visal Studio Code Text Editor</li>  
-            <li>SCSS/SASS</li>
-            <li>BEM Class Naming Conventions</li>
-            <li>Adobe xD (wireframe/artboard)</li>
+                <!-- GITHUB -->
+                <a class="github" href="https://github.com/pandemicprogrammer">
+                <img class="github-image" src="images/icons8-github.gif" alt="Github"/>
+                </a>
                 
-            <h2>Back End</h2>
+                <!-- LINKEDIN  -->
+                <a class="linkedin" href="https://www.linkedin.com/in/marie-valentonis-346385a3">
+                    <img class="linkedin-image" src="images/icons8-linkedin-100.png" alt="Linkedin">
+                </a>
+            </div>
 
-            <li>Python</li>
+            <!-- HERO IMAGE -->
+            <div class="hero__image">
 
-        </div>
-            
-      
-       <script src="script.js""></script>
-    </body>
+                <!-- <button class="cta">I'm responsive. Check it out! </button> -->
+
+                <div class="hero__overlay">
+                    <div class="hero__text">
+                        <h1 class="">
+                            Used in development of this site:</h1>
+                        <h2>Front End</h2>
+        
+                        
+                        <li> Developer Tools</li>
+                        <li>Visal Studio Code Text Editor</li>  
+                        <li>SCSS/SASS</li>
+                        <li>BEM Class Naming Conventions</li>
+                        <li>Adobe xD (wireframe/artboard)</li>
+                            
+                        <h2>Back End</h2>
+        
+                        <li>Python (Flask framework)</li>
+                    </div>
+                </div>
+        </section>
+
+        <!-- SCRIPTS -->
+        <script src="js/script.js""></script>
+        </body>
+        
+        <!-- FOOTER -->
+        <footer> 
+            <!-- COPYRIGHT -->
+            <div class="copyright">
+            <p>
+                &copy; Copyright <script>document.write(new Date().getFullYear())</script> Marie Valentonis
+            </p>
+            </div>    
+        </footer>
 </html>
